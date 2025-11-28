@@ -370,23 +370,82 @@ textarea {
   font-size: 11px;
   color: var(--color-text-muted);
 }
+/* =========================
+   HERO – Floating Phone
+   ========================= */
 
-/* هواتف الهيرو */
+/* نعيد ضبط الحاوية */
 .hero-showcase {
   position: relative;
-  height: 280px;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.hero-orbit {
+
+/* حاوية الهاتف */
+.hero-phone-wrap {
+  position: relative;
+  width: 450px;              /* حجم الهاتف – كبّره/صغّره من هنا */
+  animation: heroFloat 4.5s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+/* صورة الهاتف */
+.hero-phone-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 20px 35px rgba(0,0,0,0.35));
+}
+
+/* ظل إهليلجي تحت الهاتف */
+.hero-phone-shadow {
   position: absolute;
-  border-radius: 999px;
-  border: 1px dashed rgba(209, 213, 219, .9);
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center,
+              rgba(0,0,0,0.30) 0,
+              rgba(0,0,0,0.14) 40%,
+              transparent 70%);
+  opacity: 0.75;
+  filter: blur(2px);
+  animation: heroShadow 4.5s ease-in-out infinite;
 }
-.hero-orbit-1 {
-  inset: 14px 2px 70px 40px;
+
+/* حركة الطفو للأعلى والأسفل */
+@keyframes heroFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
 }
-.hero-orbit-2 {
-  inset: 50px 26px 10px 4px;
+
+/* ظل يتنفس مع حركة الهاتف */
+@keyframes heroShadow {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.75;
+  }
+  50% {
+    transform: translateX(-50%) scale(0.86);
+    opacity: 0.45;
+  }
 }
+
+/* على الشاشات الصغيرة نصغّر الهاتف قليلاً */
+@media (max-width: 640px) {
+  .hero-phone-wrap {
+    width: 220px;
+  }
+}
+
 
 .phone-layer {
   position: absolute;
