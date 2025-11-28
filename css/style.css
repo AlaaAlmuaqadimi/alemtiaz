@@ -1278,32 +1278,35 @@ footer {
   transform: translateY(-1px);
   box-shadow: 0 14px 32px rgba(180, 137, 29, .6);
 }
-
 /* =========================
    REVEAL / SCROLL ANIMATIONS
    ========================= */
 .reveal {
   opacity: 0;
+  will-change: transform, opacity;
 }
+
 .reveal[data-animate="up"] {
-  transform: translateY(28px) scale(.98);
+  transform: translateY(18px) scale(.99);     /* حركة أقل → شكل أرقى */
 }
 .reveal[data-animate="right"] {
-  transform: translateX(40px);
+  transform: translateX(26px);
 }
 .reveal[data-animate="left"] {
-  transform: translateX(-40px);
+  transform: translateX(-26px);
 }
 .reveal[data-animate="scale"] {
-  transform: scale(.9);
+  transform: scale(.96);
 }
+
 .reveal.in-view {
   opacity: 1;
   transform: translateX(0) translateY(0) scale(1);
   transition:
-    opacity .6s cubic-bezier(.19, 1, .22, 1),
-    transform .6s cubic-bezier(.19, 1, .22, 1);
+    opacity .45s cubic-bezier(.19, 1, .22, 1),
+    transform .45s cubic-bezier(.19, 1, .22, 1);
 }
+
 
 /* delays */
 .features-grid .feature-card:nth-child(2),
