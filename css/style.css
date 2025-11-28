@@ -442,7 +442,7 @@ textarea {
 /* على الشاشات الصغيرة نصغّر الهاتف قليلاً */
 @media (max-width: 640px) {
   .hero-phone-wrap {
-    width: 220px;
+    width: 300px;
   }
 }
 
