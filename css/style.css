@@ -809,26 +809,31 @@ section {
   gap: 18px;
 }
 
-/* الشكل العام */
 .brand-item{
   border-radius: 18px;
   padding: 22px 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform .25s ease, box-shadow .25s ease;
+  height: 92px;                 /* توحيد ارتفاع البوكس */
 }
 
+/* توحيد حجم عرض اللوقو */
 .brand-item img{
-  max-height: 42px;
-  max-width: 100%;
+  max-width: 120px;              /* أهم سطر */
+  max-height: 46px;
+  width: auto;
+  height: auto;
   object-fit: contain;
 }
+
 
 /* ===== ألوان مخصصة ===== */
 
 /* شعارات داكنة → خلفية فاتحة */ 
+.bg-nokia   { background:#ffffff; }
 .bg-realme   { background:#facc15; }
+.bg-infinix    { background:#ffffff; } 
 .bg-xiaomi   { background:#ff6900; }
 .bg-tecno    { background:#fafafa; } 
 
@@ -986,7 +991,7 @@ section {
   background: #f3f4f6;
   border-radius: 22px;
   border: 1px solid rgba(17,24,39,.08);
-  padding: 18px 14px;
+  padding: 60px 14px;
   overflow: hidden;
 }
 
