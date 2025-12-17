@@ -10,24 +10,38 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
 </head>
 <body>
 
-<div class="page-wrapper">
 
-  <!-- NAVBAR -->
-  <header class="top-nav">
-    <div class="nav-left">
-      <div class="logo-box">
-        <div class="logo-icon"></div>
-        <div>
-          <div class="logo-text-main">ALE<span>MTIAZ</span> MOBILE</div>
-          <div class="logo-sub">شركة الامتياز لاستيراد الأجهزة ومعدات الاتصالات</div>
-        </div>
-      </div>
+  <!-- NAV -->
+<header class="nav" id="top">
+  <div class="nav-inner">
+
+    <!-- (موبايل) زر اتصال -->
+    <div class="nav-actions">
+      <a class="icon-btn" href="tel:+218913688853" aria-label="اتصال مباشر">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.7.6 2.5a2 2 0 0 1-.4 2.1L8.2 9.8a16 16 0 0 0 6 6l1.5-1.1a2 2 0 0 1 2.1-.4c.8.3 1.6.5 2.5.6A2 2 0 0 1 22 16.9z"/>
+        </svg>
+      </a>
     </div>
 
-    <nav class="nav-links">
+    <!-- Brand -->
+    <a class="brand" href="#hero" aria-label="الرئيسية">
+      <div class="logo">
+        <!-- ضع شعارك هنا -->
+        <img src="images/logo.jpg" alt="شعار شركة الامتياز">
+      </div>
+      <div class="brand-text">
+        شركة <span class="brand-highlight">الامتياز</span><br/>
+        <span class="brand-sub">استيراد الأجهزة ومعدات الاتصالات</span>
+      </div>
+    </a>
+
+    <!-- Menu -->
+    <nav class="menu" id="mainMenu" aria-label="القائمة">
       <a data-scroll="#hero">الرئيسية</a>
       <a data-scroll="#services">خدماتنا</a>
       <a data-scroll="#products">بعض الموديلات</a>
@@ -35,16 +49,23 @@
       <a data-scroll="#contact">تواصل معنا</a>
     </nav>
 
+    <!-- (موبايل) زر فتح القائمة -->
     <div class="nav-actions">
-      <div class="nav-phone">
-        <span>الهاتف</span>
-        +218 XX XXX XXXX
-      </div>
-      <button class="btn btn-outline" data-scroll="#contact">استعلام عن الأجهزة</button>
-      <button class="btn btn-primary" data-scroll="#products">استعراض الموديلات</button>
+      <button
+        class="icon-btn"
+        id="menuToggle"
+        type="button"
+        aria-label="فتح القائمة"
+        aria-expanded="false"
+        aria-controls="mainMenu">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </div>
-  </header>
 
+  </div>
+</header>
   <!-- HERO -->
   <section class="hero" id="hero">
     <div class="hero-grid">
@@ -56,11 +77,7 @@
         <p class="hero-subtitle">
           نوفر شحنات هواتف ذكية، أجهزة لوحية، وإكسسوارات أصلية
           للمتاجر والشركات، مع اهتمام خاص بجودة المصدر واعتمادية التوريد.
-        </p>
-        <div class="hero-cta-row">
-          <button class="btn btn-primary" data-scroll="#products">استعراض الموديلات المتاحة</button>
-          <button class="btn btn-outline" data-scroll="#contact">طلب عرض توريد أو شحنة</button>
-        </div>
+        </p> 
         <ul class="hero-bullets">
           <li>توريد لمتاجر التجزئة والشركات داخل ليبيا.</li>
           <li>اختيار موديلات مطلوبة في السوق الليبي والعالمي.</li>
@@ -84,13 +101,16 @@
 
       <div class="hero-showcase reveal" data-animate="left">
         <div class="hero-phone-wrap">
-          <img src="images/hero.png" alt="iPhone 17 Pro" class="hero-phone-img">
+          <img src="images/bg.jpg" alt="iPhone 17 Pro" class="hero-phone-img">
           <div class="hero-phone-shadow"></div>
         </div>
       </div>
 
     </div>
   </section>
+
+<div class="page-wrapper">
+
 
   <!-- خدماتنا -->
   <section id="services">

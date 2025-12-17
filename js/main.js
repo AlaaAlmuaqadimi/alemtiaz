@@ -138,3 +138,24 @@
       });
     });
   } 
+
+  // Mobile Nav Toggle
+const menuToggle = document.getElementById("menuToggle");
+const mainMenu = document.getElementById("mainMenu");
+
+if (menuToggle && mainMenu) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = mainMenu.classList.toggle("is-open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  // إغلاق القائمة عند الضغط على أي رابط (مفيد بالموبايل)
+  mainMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (mainMenu.classList.contains("is-open")) {
+        mainMenu.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
+}
