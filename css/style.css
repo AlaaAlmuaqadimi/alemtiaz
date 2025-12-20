@@ -135,8 +135,7 @@ textarea {
   border-radius:16px;
   display:flex;
   align-items:center;
-  justify-content:center; 
-  box-shadow: 0 8px 24px rgba(18,24,38,.10);
+  justify-content:center;  
   overflow:hidden;
 }
 .logo img{
