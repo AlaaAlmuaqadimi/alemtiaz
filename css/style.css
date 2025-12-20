@@ -130,19 +130,12 @@ textarea {
 }
 
 .logo{
-  width:56px;
-  height:56px;
+  width:75px;
+  height:60px;
   border-radius:16px;
-  background: linear-gradient(
-    135deg,
-    rgba(212,175,55,.18) 0%,
-    rgba(255,248,225,.75) 55%,
-    rgba(180,137,29,.14) 100%
-  );
   display:flex;
   align-items:center;
-  justify-content:center;
-  border:1px solid rgba(17,24,39,.12);
+  justify-content:center; 
   box-shadow: 0 8px 24px rgba(18,24,38,.10);
   overflow:hidden;
 }
