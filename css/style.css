@@ -122,11 +122,7 @@ button, input, textarea{ font-family:inherit; }
   display:flex;
   align-items:center;
   justify-content:center;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 30% 20%, rgba(246,213,107,.40), transparent 55%),
-    linear-gradient(145deg, rgba(255,255,255,.85), rgba(255,255,255,.55));
-  border:1px solid rgba(17,24,39,.08);
+  overflow:hidden; 
 }
 
 .logo img{
